@@ -11,6 +11,7 @@ type MessageCreateRequest struct {
 	ChannelID string          `json:"channelid"`
 	Content   *MessageContent `json:"content"`
 	Type      MessageType     `json:"type"`
+	ReportURL *string         `json:"reporturl"`
 }
 
 // CreateMessage sends a new message to the specified conversation. To create a

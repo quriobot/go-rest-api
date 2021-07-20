@@ -56,6 +56,7 @@ type Contact struct {
 	MSISDN        string
 	FirstName     string
 	LastName      string
+	DisplayName   string
 	CustomDetails map[string]interface{}
 	CreatedAt     *time.Time
 	UpdatedAt     *time.Time
@@ -252,6 +253,7 @@ func (c *Contact) UnmarshalJSON(data []byte) error {
 		MSISDN        json.Number
 		FirstName     string
 		LastName      string
+		DisplayName   string
 		CustomDetails map[string]interface{}
 		CreatedAt     *time.Time
 		UpdatedAt     *time.Time
@@ -278,6 +280,7 @@ func (c *Contact) UnmarshalJSON(data []byte) error {
 		target.MSISDN.String(),
 		target.FirstName,
 		target.LastName,
+		target.DisplayName,
 		target.CustomDetails,
 		target.CreatedAt,
 		target.UpdatedAt,
